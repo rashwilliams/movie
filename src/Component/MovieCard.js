@@ -1,23 +1,31 @@
 import React from "react";
-import {Card} from "react-bootstrap";
-import MovieList from "./MovieList.js";
-import { Fragment } from "react";
-
+import { Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const MovieCard = (props) => {
-    return ( <Fragment>
-        <Card style={{ width: "100%" }} className="mb-3 mt-2" key={MovieList}>
-              <Card.Body>
-                <Card.Title>{props.Title}</Card.Title>
-                <Card.Description>{props.Description}</Card.Description>
-                <Card.Rating>{props.Rating}</Card.Rating>
-                <Card.URL>{props.URL}</Card.URL>
-              </Card.Body>
-            </Card>
-      </Fragment>
+  return (
+    <div>
+      {props.movieList.map((movie) => {
+        return (
+          <a href={`/movie/${movie.title}`}>
+            <div class="card" style={{ width: "100%" }}>
+              <img src="..." class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">
+                  Go somewhere
+                </a>
+              </div>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  );
+};
 
-    )
-
-}
-
-export default MovieCard
+export default MovieCard;

@@ -1,10 +1,11 @@
 
- const MovieList = [
+ const movieList = [
     {
       title: "ayamatanga",
       description: 'action',
       posterURL: "https.movies.com",
       rating: 16,
+      trailerlink: "https://www.youtube.com/watch?v=InNrl2-tl58"
       
     },
 
@@ -13,6 +14,7 @@
       description: 'sci-fic',
       posterURL: "https.movies.com",
       rating: 18,
+      trailerlink: "https://www.youtube.com/watch?v=InNrl2-tl58"
       
     },
 
@@ -21,6 +23,7 @@
       description: 'drama',
       posterURL: "https.movies.com",
       rating: 16,
+      trailerlink: "https://www.youtube.com/watch?v=InNrl2-tl58"
       
     },
 
@@ -29,9 +32,11 @@
       description: 'drama',
       posterURL: "https.movies.com",
       rating: 18,
+      trailerlink: "https://www.youtube.com/watch?v=InNrl2-tl58"
       
     },
 
 ]
 
-    export default MovieList
+
+export default movieList
